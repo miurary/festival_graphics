@@ -4,10 +4,55 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-scaffold</title>
+    <title>Phase 1 — extrude harness</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #111318;
+      }
+      #app {
+        position: fixed;
+        inset: 0;
+      }
+      canvas {
+        display: block;
+      }
+      #hud {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+        margin: 0;
+        white-space: pre;
+        pointer-events: none;
+        font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: #8b96a8;
+        text-shadow: 0 1px 2px #000;
+      }
+      #err {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        display: none;
+        place-content: center;
+        margin: 0;
+        padding: 2rem;
+        white-space: pre-wrap;
+        background: #111318;
+        font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: #ff8f8f;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="app"></div>
+    <div id="hud"></div>
+    <pre id="err"></pre>
+    <script type="module" src="/src/phase1/main.ts"></script>
   </body>
 </html>
